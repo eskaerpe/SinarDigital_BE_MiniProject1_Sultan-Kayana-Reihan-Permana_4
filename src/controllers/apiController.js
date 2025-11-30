@@ -1,10 +1,9 @@
-// TO ADD: Implementasi controller utama untuk API
-// Contoh: fungsi untuk handle request GET, POST, dll
 const fs = require("fs");
 const path = require("path");
 const blog = require("../../data/blog.json");
 const authors = require("../../data/authors.json");
 const blogFilePath = path.join(__dirname, "../../data/blog.json");
+const generateID = require("../utils/helpers.js").generateID;
 
 class Blog {
 	static getAllBlogs(req, res) {
@@ -12,7 +11,8 @@ class Blog {
 	}
 
 	static createBlog(req, res) {
-		const newId = blog[blog.length - 1].id + 1;
+		// const newId = blog[blog.length - 1].id + 1;
+		const newId = generateID(blog);
 		const { title, author, content } = req.body;
 		const newBlog = {
 			id: newId,
@@ -78,4 +78,4 @@ class Author {
 	}
 }
 
-module.exports = { Author, Blog };
+module.exports = { Author, Blog }; // biar bisa di import di file lain

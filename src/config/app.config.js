@@ -1,2 +1,7 @@
-// TO ADD: Konfigurasi aplikasi (misal: port, database, dll)
-// Export konfigurasi yang diperlukan
+require("dotenv").config();
+
+const config = {
+	port: process.env.PORT || 3000,
+};
+
+module.exports = config; // biar bisa di import di file lain

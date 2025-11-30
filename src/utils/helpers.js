@@ -1,2 +1,5 @@
-// TO ADD: Fungsi-fungsi utilitas yang sering digunakan
-// Contoh: formatDate, generateId, dll
+function generateID(arr) {
+	return arr.length ? arr[arr.length - 1].id + 1 : 1;
+}
+
+module.exports = { generateID };

@@ -1,20 +1,15 @@
-// TO ADD: Definisikan semua API endpoint di sini
-// Contoh: router.get('/authors', ...)
 const express = require("express");
 const { Blog, Author } = require("../controllers/apiController.js");
+const validateBlog = require("../middlewares/validator.js");
 
-const app = express();
-app.use(express.json());
+const router = express.Router();
 
-app.get("/blog", Blog.getAllBlogs);
-
-app.post("/blog", Blog.createBlog);
-
-app.put("/blog/:id", Blog.updateBlog);
-
-app.delete("/blog/:id", Blog.deleteBlog);
-
+// route for blog
+router.get("/blog", Blog.getAllBlogs);
+router.post("/blog", validateBlog, Blog.createBlog);
+router.put("/blog/:id", validateBlog, Blog.updateBlog);
+router.delete("/blog/:id", Blog.deleteBlog);
 // defining route for authors
-app.get("/authors", Author.getAllAuthors);
+router.get("/authors", Author.getAllAuthors);
 
-module.exports = app;
+module.exports = router; // biar bisa di import di file lain

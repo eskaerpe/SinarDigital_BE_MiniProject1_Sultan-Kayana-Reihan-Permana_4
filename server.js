@@ -1,7 +1,7 @@
-// TO MOVE: server.js harus berada di root sesuai struktur folder yang direkomendasikan
 // initializing express app
 const app = require("./src/app");
-const PORT = process.env.PORT || 3000;
+const config = require("./src/config/app.config.js");
+const PORT = config.port;
 
 app.listen(PORT, () => {
 	console.log(`Server is running on port ${PORT}`);

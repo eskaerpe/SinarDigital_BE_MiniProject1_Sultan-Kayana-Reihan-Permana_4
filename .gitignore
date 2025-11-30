@@ -1,2 +1,2 @@
-# TO MOVE: .gitignore harus berada di root sesuai struktur folder yang direkomendasikan
 .env
+node_modules

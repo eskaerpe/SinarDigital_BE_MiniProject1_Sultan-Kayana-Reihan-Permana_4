@@ -23,5 +23,20 @@
 		"name": "Andi Wijaya",
 		"email": "andi.wijaya@example.com",
 		"number": "333-222-1111"
+	},
+	{
+		"name": "Dimas Arvian",
+		"email": "dimas.arvian@example.com",
+		"number": "222-333-4444"
+	},
+	{
+		"name": "Siti Nur",
+		"email": "siti.nur@example.com",
+		"number": "777-888-9999"
+	},
+	{
+		"name": "Andi Pratama",
+		"email": "andi.pratama@example.com",
+		"number": "111-222-3333"
 	}
 ]

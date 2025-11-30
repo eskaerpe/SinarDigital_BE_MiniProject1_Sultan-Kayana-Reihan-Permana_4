@@ -1,5 +1,3 @@
-// TO ADD: Inisialisasi route utama aplikasi
-// Import dan gunakan semua route dari apiRoutes.js
 const express = require("express");
 const router = express.Router();
 const apiRoutes = require("./apiRoutes.js");
@@ -18,4 +16,4 @@ router.get("/", (req, res) => {
 	});
 });
 
-module.exports = router;
+module.exports = router; // biar bisa di import di file lain
