@@ -2,10 +2,10 @@
 	"name": "mini_project_1",
 	"version": "1.0.0",
 	"description": "",
-	"main": "routes/server.js",
+	"main": "./server.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"dev": "nodemon routes/server.js"
+		"dev": "nodemon ./server.js"
 	},
 	"keywords": [],
 	"author": "",

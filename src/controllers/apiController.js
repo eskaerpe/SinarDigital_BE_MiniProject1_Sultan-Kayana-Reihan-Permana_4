@@ -1,7 +1,10 @@
+// TO ADD: Implementasi controller utama untuk API
+// Contoh: fungsi untuk handle request GET, POST, dll
 const fs = require("fs");
 const path = require("path");
-const blog = require("../data/blog.json");
-const blogFilePath = path.join(__dirname, "../data/blog.json");
+const blog = require("../../data/blog.json");
+const authors = require("../../data/authors.json");
+const blogFilePath = path.join(__dirname, "../../data/blog.json");
 
 class Blog {
 	static getAllBlogs(req, res) {
@@ -69,4 +72,10 @@ class Blog {
 	}
 }
 
-module.exports = Blog;
+class Author {
+	static getAllAuthors(req, res) {
+		res.json(authors);
+	}
+}
+
+module.exports = { Author, Blog };
